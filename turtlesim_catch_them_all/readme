@@ -1,0 +1,3 @@
+This is an intoductory ROS2 project which leverages the turtlesim package, along with basic ROS fundamentals like
+Topics, Nodes, Services and ROS velocity and steering control theories to control a master turtle to chase and kill
+other turtles that spawn on the simulation screen.
