@@ -24,8 +24,8 @@
             </geometry>
             <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
         </collision>
-        <xacro:box_inertial m="5.0" l="${base_length}" 
-        w="${base_width}" h="${base_height}" xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+        <xacro:box_inertial m="5.0" l="${2*base_length}" 
+        w="${2*base_width}" h="${2*base_height}" xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
     </link>
 
     <xacro:macro name="wheel_link" params="prefix">
@@ -43,7 +43,7 @@
                 </geometry>
                 <origin xyz="0 0 0" rpy="${pi / 2.0} 0 0" />
             </collision>
-            <xacro:wheel_inertial m="1.0" r="${wheel_radius}" l="${wheel_length}" xyz="0 0 0"
+            <xacro:wheel_inertial m="1.0" r="${2*wheel_radius}" l="${2*wheel_length}" xyz="0 0 0"
             rpy="${pi / 2.0} 0 0" />
         </link>
     
@@ -67,7 +67,7 @@
             </geometry>
             <origin xyz="0 0 ${-wheel_radius / 2.0}" rpy="0 0 0" />
         </collision>
-        <xacro:caster_wheel_inertial m="0.5" r="${wheel_length}" 
+        <xacro:caster_wheel_inertial m="0.5" r="${2*wheel_length}" 
         xyz="0 0 ${-wheel_radius / 2.0}" rpy="0 0 0" />
     </link>
 
