@@ -18,6 +18,12 @@
             <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
             <material name="green" />
         </visual>
+        <collision>
+            <geometry>
+                <box size="${base_length} ${base_width} ${base_height}" />
+            </geometry>
+            <origin xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
+        </collision>
         <xacro:box_inertial m="5.0" l="${base_length}" 
         w="${base_width}" h="${base_height}" xyz="0 0 ${base_height / 2.0}" rpy="0 0 0" />
     </link>
@@ -31,6 +37,12 @@
                 <origin xyz="0 0 0" rpy="${pi / 2.0} 0 0" />
                 <material name="grey" />              
             </visual>
+            <collision>
+                <geometry>
+                    <cylinder radius="${wheel_radius}" length="${wheel_length}" />
+                </geometry>
+                <origin xyz="0 0 0" rpy="${pi / 2.0} 0 0" />
+            </collision>
             <xacro:wheel_inertial m="1.0" r="${wheel_radius}" l="${wheel_length}" xyz="0 0 0"
             rpy="${pi / 2.0} 0 0" />
         </link>
@@ -49,6 +61,12 @@
             <origin xyz="0 0 ${-wheel_radius / 2.0}" rpy="0 0 0" />
             <material name="grey" />              
         </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${wheel_length}" />
+            </geometry>
+            <origin xyz="0 0 ${-wheel_radius / 2.0}" rpy="0 0 0" />
+        </collision>
         <xacro:caster_wheel_inertial m="0.5" r="${wheel_length}" 
         xyz="0 0 ${-wheel_radius / 2.0}" rpy="0 0 0" />
     </link>
