@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
 
     <material name="green">
         <color rgba="0 0.5 0 1" />
@@ -10,6 +11,12 @@
     </material>
     <material name="blue">
         <color rgba="0 0 0.5 1" />
+    </material>
+    <material name="orange">
+        <color rgba="1 0.647 0 1" />
+    </material>
+    <material name="yellow">
+        <color rgba="1 1 0 1" />
     </material>
 
     <xacro:macro name="box_inertial" params="m l w h xyz rpy">
@@ -41,6 +48,5 @@
             izz="${(2*m/5)*(r*r)}" />
         </inertial>
     </xacro:macro>
-
 </robot>
 
