@@ -10,7 +10,7 @@ class MyNode(Node):
 
     def timer_callback(self):
         self.counter_ += 1
-        self.get_logger().info("Hello " + str(self.counter_))
+        self.get_logger().info("Hello " + str(self.counter_))     
 def main(args=None):
     rclpy.init(args = args)
     node = MyNode()
