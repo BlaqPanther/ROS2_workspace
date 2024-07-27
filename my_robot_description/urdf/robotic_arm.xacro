@@ -61,7 +61,7 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <limit lower="0" upper="${pi/2}" effort="100" velocity="100" />
         <dynamic friction="0.05" damping="0.1" />
-        <axis xyz="0 0 1"/>
+        <axis xyz="0 1 0"/>
     </joint>
 
     <joint name="forearm_hand_joint" type="revolute">
@@ -70,7 +70,7 @@
         <origin xyz="0 0 ${common_arm_length}" rpy="0 0 0" />
         <limit lower="0" upper="${pi/2}" effort="100" velocity="100" />
         <dynamic friction="0.05" damping="0.1" />
-        <axis xyz="0 0 1"/>
+        <axis xyz="0 1 0"/>
     </joint>
 
 

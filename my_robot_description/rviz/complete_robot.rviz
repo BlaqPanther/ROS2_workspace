@@ -149,21 +149,22 @@ Visualization Manager:
       Show Axes: true
       Show Names: false
       Tree:
+        base_footprint:
+          base_link:
+            arm_base_link:
+              forearm_link:
+                hand_link:
+                  {}
+            camera_link:
+              {}
+            caster_wheel_link:
+              {}
+          left_wheel_link:
+            {}
+          right_wheel_link:
+            {}
         odom:
-          base_footprint:
-            base_link:
-              arm_base_link:
-                forearm_link:
-                  hand_link:
-                    {}
-              camera_link:
-                {}
-              caster_wheel_link:
-                {}
-            left_wheel_link:
-              {}
-            right_wheel_link:
-              {}
+          {}
       Update Interval: 0
       Value: true
   Enabled: true
